@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:padding="50dp"
+
+    tools:context=".MainActivity"
+    android:id="@+id/linearLayout">
+
+    <GridView
+        android:id="@+id/meuGrid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:columnWidth="60dip"
+        android:gravity="center"
+
+        android:horizontalSpacing="10dip"
+        android:numColumns="4"
+
+        android:padding="10dip"
+        android:verticalSpacing="10dip"
+
+        tools:layout_conversion_absoluteHeight="632dp"
+        tools:layout_conversion_absoluteWidth="312dp"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="50dp" />
+
+</LinearLayout>
