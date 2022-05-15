@@ -7,13 +7,13 @@ import java.net.MalformedURLException
 import java.net.URL
 import java.util.*
 
-open class HttpService {
+open class HttpService (){
 
     private lateinit var idImage: String
 
-    //    Construtor - Recebe apenas a numeração do cep digitado na classe Main, em formato de string.
-    open fun HttpService() {
-
+    //    Construtor - Recebe apenas o id da imagem
+    constructor(idImg: String) : this() {
+        this.idImage = idImg
     }
 
     @Override
@@ -33,7 +33,7 @@ open class HttpService {
             connection.setRequestProperty("Content-type", "application/json")
             connection.setRequestProperty("Accept", "application/json")
 
-//            Informação sobre a chave de autorização
+//                Informação sobre a chave de autorização
             connection.setRequestProperty("Authorization", "Client-ID 1ceddedc03a5d71")
 
             connection.doOutput = true

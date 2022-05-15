@@ -1,10 +1,11 @@
-package br.com.deliciasdorn
+package br.com.resthttpimages
 
-internal class EstruturaDados {
+ class EstruturaDados() {
 
     private var icone : Int? = null
     private var idWebService : String? = null
 
+     /*
     //            Construtores
     fun EstruturaDados(novoIcone: Int) {
         icone = novoIcone
@@ -18,7 +19,7 @@ internal class EstruturaDados {
         icone = novoIcone
         idWebService = novoId
     }
-
+*/
     fun getIdWebservice() : String? {
         return idWebService
     }
@@ -30,7 +31,6 @@ internal class EstruturaDados {
     fun getIcone(): Int? {
         return icone
     }
-
     fun setIcone(novoIcone: Int): Unit {
         icone = novoIcone
     }

@@ -1,4 +1,4 @@
-package br.com.deliciasdorn
+package br.com.resthttpimages
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,10 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ImageView
-import br.com.resthttpimages.EstruturaViews
-import br.com.resthttpimages.R
 
-internal class MeuAdaptador(context: Context, resource: Int) : ArrayAdapter<Any?>(context, resource) {
+class MeuAdaptador(context: Context, resource: Int) : ArrayAdapter<Any?>(context, resource) {
     override fun add(`object`: Any?) {
         super.add(`object`)
     }
