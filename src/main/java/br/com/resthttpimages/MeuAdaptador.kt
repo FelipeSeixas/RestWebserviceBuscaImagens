@@ -24,9 +24,8 @@ class MeuAdaptador(context: Context, resource: Int) : ArrayAdapter<Any?>(context
             val inflater = this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             minhaView = inflater.inflate(R.layout.activity_main, parent, false)
             estruturaViews = EstruturaViews()
-            estruturaViews.icone = minhaView.findViewById<View>(R.id.meuicone) as ImageView
+            estruturaViews.icone = minhaView.findViewById<View>(R.drawable.meuIcone) as ImageView
 
-//           estruturaViews.whatsApp = (ImageView) minhaView.findViewById(R.id.imageWhatsApp);
             minhaView.tag = estruturaViews
         } else {
             estruturaViews = minhaView.tag as EstruturaViews
@@ -34,10 +33,9 @@ class MeuAdaptador(context: Context, resource: Int) : ArrayAdapter<Any?>(context
         val estruturaDados: EstruturaDados?
         estruturaDados = getItem(position) as EstruturaDados?
         if (estruturaDados != null) {
-            estruturaViews.icone?.setImageResource(estruturaDados.getIcone())
+            estruturaDados.getIcone()?.let { estruturaViews.icone?.setImageResource(it) }
         }
 
-        // estruturaViews.whatsApp.setImageResource(estruturaDados.getLinkWhatsapp());
         return minhaView
     }
 }

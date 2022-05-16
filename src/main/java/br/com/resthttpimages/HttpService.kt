@@ -11,16 +11,15 @@ open class HttpService (){
 
     private lateinit var idImage: String
 
-    //    Construtor - Recebe apenas o id da imagem
+    //    Construtor secuário - Recebe um possível id da imagem
     constructor(idImg: String) : this() {
         this.idImage = idImg
     }
 
     @Override
-    fun doInBackground(vararg voids: Void): EstruturaViews {
+    fun  doInBackground(vararg voids: Void): EstruturaDados {
         val resposta = StringBuilder()
 
-//        Validação do cep: vazio ou quantidade de cracteres desejados
         try {
 //                Declaração da URL e armazenamento do endPoint
             val url = URL("https://api.imgur.com/3/gallery/search/?q=cat")
@@ -48,6 +47,6 @@ open class HttpService (){
         } catch (e: IOException) {
             e.printStackTrace()
         }
-        return Gson().fromJson(resposta.toString(), EstruturaViews::class.java)
+        return Gson().fromJson(resposta.toString(), EstruturaDados::class.java)
     }
 }

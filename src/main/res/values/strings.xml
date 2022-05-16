@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Onde estão os gatos?</string>
+
+    <string name="imageGrigPadrao">Imagem padrao</string>
 </resources>
